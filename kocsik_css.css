@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkslategray;
+}
+
+header, nav, aside, footer, article, article .ora{
+    border: 1px solid grey;
+    padding: 5px
+}
+
+header{
+    background-color: rgb(106, 106, 255);
+    color:white;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+article .ora img{
+    width: 100%;
+}
+
+article .ora .kep{
+    height: 170px;
+    overflow: hidden;
+}
+
+article .ora{
+    background-color: white;
+    border: 4px solid rgb(106, 106, 255);
+    margin:6px;
+    border-radius: 13px;
+    
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer{
+    background-color: rgb(106, 106, 255);
+    color:white;
+}
+
+
+main {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "h h"
+                         "n n"
+                         "a as"
+                         "f f" ;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width:1000px) {
+    main {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "a"
+                             "as"
+                             "f" ;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+
+
+

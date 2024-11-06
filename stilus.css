@@ -1,0 +1,62 @@
+body{
+    background-color: beige;
+}
+
+nav ul{
+    display:  grid;
+    grid-template-columns: 200px 1fr 1fr;
+}
+
+header, nav, article, aside, footer, .cikk {
+    border: 1px solid grey;
+    padding: 10px
+}
+
+article{
+    display:grid;
+    grid-template-columns: 1f;
+}
+
+main {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "h h"
+                         "n n"
+                         "a as"
+                         "f f" ;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width:800px) {
+    main {
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "as"
+                             "a"
+                             "f" ;
+    }
+}
+
+
+
